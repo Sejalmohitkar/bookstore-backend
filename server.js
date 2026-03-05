@@ -1,7 +1,8 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-require('dotenv').config();
+
 
 const bookRoutes = require('./routes/books');
 
@@ -54,3 +55,6 @@ mongoose
     console.error('❌ MongoDB connection error:', err.message);
     process.exit(1);
   });
+
+  module.exports = app;
+
