@@ -17,6 +17,9 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get("/", (req, res) => {
+  res.send("📚 Bookstore API is running successfully");
+});
 // Routes
 app.use('/api/books', bookRoutes);
 
